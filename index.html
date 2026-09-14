@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Toca y Sube — Sube tu negocio al primer lugar en Google Maps</title>
+<title>TOCA — Identidad digital y reputación, a un toque</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -165,6 +165,69 @@
   .titulo-seccion{font-size:32px; max-width:600px;}
   .intro-seccion{color:var(--gris-texto); font-weight:400; font-size:16px; max-width:540px; margin-top:14px;}
 
+  /* ---------- SELECTOR DE PÚBLICO ---------- */
+  .selector-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:0;}
+  .selector-card{
+    border-radius:20px; padding:32px; display:flex; flex-direction:column; gap:18px;
+  }
+  .selector-card.negocios{background:var(--gris-fondo);}
+  .selector-card.personal{background:var(--oscuro); color:var(--blanco);}
+  .selector-card .kicker{margin-bottom:0;}
+  .selector-card.personal .kicker{color:#C9A8F5;}
+  .selector-card h3{font-size:21px;}
+  .selector-card p{font-size:14.5px; font-weight:400; line-height:1.55;}
+  .selector-card.negocios p{color:var(--gris-texto);}
+  .selector-card.personal p{color:#B9C0D4;}
+  .selector-card .cta-selector{
+    align-self:flex-start; display:inline-flex; align-items:center; gap:8px;
+    font-weight:700; font-size:14px; padding:12px 20px; border-radius:10px;
+  }
+  .selector-card.negocios .cta-selector{background:var(--azul); color:var(--blanco);}
+  .selector-card.personal .cta-selector{background:var(--verde); color:var(--azul-oscuro);}
+
+  /* Mini mockup: tarjeta Google/reseñas sobre mostrador */
+  .selector-visual{height:150px; position:relative; border-radius:14px; overflow:hidden;}
+  .visual-negocios{background:linear-gradient(180deg, #E9DFFB 0%, #D9C7F7 100%);}
+  .mostrador{
+    position:absolute; left:0; right:0; bottom:0; height:46px;
+    background:linear-gradient(180deg, var(--azul-oscuro) 0%, #2A0A6B 100%);
+  }
+  .mini-card-google{
+    position:absolute; left:50%; bottom:34px; transform:translateX(-50%);
+    width:100px; height:96px; background:var(--blanco); border-radius:12px;
+    box-shadow:0 14px 26px -8px rgba(14,23,55,0.35);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+  }
+  .mini-card-google .estrellas-mini{color:#FBBC05; font-size:13px; letter-spacing:1px;}
+  .mini-card-google .google-mini{font-size:14px; font-weight:800; font-family:Arial, sans-serif;}
+  .mini-card-google .google-mini span:nth-child(1){color:#4285F4;}
+  .mini-card-google .google-mini span:nth-child(2){color:#EA4335;}
+  .mini-card-google .google-mini span:nth-child(3){color:#FBBC05;}
+  .mini-card-google .google-mini span:nth-child(4){color:#4285F4;}
+  .mini-card-google .google-mini span:nth-child(5){color:#34A853;}
+  .mini-card-google .google-mini span:nth-child(6){color:#EA4335;}
+  .mini-card-google .reseñas-mini{font-size:8.5px; font-weight:600; color:var(--gris-texto);}
+
+  /* Mini mockup: tarjeta ejecutiva/personal */
+  .visual-personal{background:linear-gradient(160deg, #241A38 0%, #14171F 100%);}
+  .mini-card-exec{
+    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+    width:150px; height:110px; background:#0F1116; border:1px solid #2A2F42; border-radius:12px;
+    padding:14px 16px; display:flex; flex-direction:column; justify-content:space-between;
+    box-shadow:0 14px 30px -8px rgba(0,0,0,0.5);
+  }
+  .mini-card-exec .qr-exec{
+    width:26px; height:26px; border-radius:4px; align-self:flex-end;
+    background-image:
+      linear-gradient(90deg, #FFFFFF 0 30%, transparent 30% 70%, #FFFFFF 70%),
+      linear-gradient(0deg, #FFFFFF 0 30%, transparent 30% 70%, #FFFFFF 70%);
+    background-size:6px 6px; background-color:transparent; border:1.5px solid #FFFFFF; opacity:0.85;
+  }
+  .mini-card-exec .nombre-exec{font-size:13px; font-weight:700; color:var(--blanco); margin-top:-20px;}
+  .mini-card-exec .rol-exec{font-size:9.5px; color:#8791A8; margin-top:1px;}
+  .mini-card-exec .socials-exec{display:flex; gap:6px; margin-top:8px;}
+  .mini-card-exec .socials-exec span{width:14px; height:14px; border-radius:50%; border:1.4px solid var(--verde);}
+
   /* ---------- PROBLEMA ---------- */
   .problema{background:var(--oscuro); color:var(--blanco);}
   .problema .kicker{color:#C9A8F5;}
@@ -238,6 +301,49 @@
   .beneficio-box h3{font-size:15.5px; margin-top:20px;}
   .beneficio-box p{margin-top:8px; font-size:13.5px; color:var(--gris-texto); font-weight:400; line-height:1.5;}
 
+  /* ---------- CATÁLOGO ---------- */
+  .catalogo-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:48px;}
+  .catalogo-card{
+    border-radius:22px; padding:36px; scroll-margin-top:88px;
+    display:flex; flex-direction:column;
+  }
+  .catalogo-card.clara{background:var(--gris-fondo);}
+  .catalogo-card.oscura{background:var(--oscuro); color:var(--blanco);}
+  .catalogo-card .kicker{margin-top:22px;}
+  .catalogo-card.oscura .kicker{color:#C9A8F5;}
+  .catalogo-card h3{font-size:20px; margin-top:6px;}
+  .catalogo-card > p{margin-top:10px; font-size:14.5px; font-weight:400; line-height:1.55;}
+  .catalogo-card.clara > p{color:var(--gris-texto);}
+  .catalogo-card.oscura > p{color:#B9C0D4;}
+  .catalogo-card ul{list-style:none; margin-top:18px; margin-bottom:26px;}
+  .catalogo-card li{
+    font-size:13.5px; font-weight:500; margin-bottom:12px;
+    display:flex; align-items:flex-start; gap:10px;
+    transition:transform 0.25s ease;
+  }
+  .catalogo-card.clara li{color:var(--oscuro);}
+  .catalogo-card.oscura li{color:#DDE2EF;}
+  .catalogo-card li .num-emoji{font-size:15px; line-height:1.3; flex-shrink:0;}
+  .catalogo-card:hover li:nth-child(1){transform:translateX(8px); transition-delay:0s;}
+  .catalogo-card:hover li:nth-child(2){transform:translateX(8px); transition-delay:0.06s;}
+  .catalogo-card:hover li:nth-child(3){transform:translateX(8px); transition-delay:0.12s;}
+  .catalogo-card .cta-principal{margin-top:auto; align-self:flex-start;}
+
+  /* Vista grande de la tarjeta Google/Business dentro del catálogo */
+  .catalogo-visual{height:170px; position:relative; border-radius:16px; overflow:hidden; background:linear-gradient(180deg, #E9DFFB 0%, #D9C7F7 100%);}
+  .catalogo-visual .mostrador{
+    position:absolute; left:0; right:0; bottom:0; height:52px;
+    background:linear-gradient(180deg, var(--azul-oscuro) 0%, #2A0A6B 100%);
+  }
+  .catalogo-visual .mini-card-google{
+    position:absolute; left:50%; bottom:38px; transform:translateX(-50%);
+    width:112px; height:108px;
+  }
+
+  /* Vista grande de la tarjeta Executive/Personal dentro del catálogo */
+  .catalogo-visual.oscuro-visual{background:linear-gradient(160deg, #241A38 0%, #14171F 100%);}
+  .catalogo-visual .mini-card-exec{width:170px; height:126px;}
+
   /* ---------- NICHOS / TIPOS DE NEGOCIO ---------- */
   .nichos-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:48px;}
   .nicho-box{
@@ -257,7 +363,30 @@
   .resenas-mock{
     margin-top:48px; background:var(--oscuro); border-radius:24px; padding:44px; color:var(--blanco);
   }
+  .resenas-mock + .resenas-mock{margin-top:24px;}
   .resenas-mock .intro-mock{color:#B9C0D4; font-size:15px; font-weight:400; max-width:520px;}
+
+  /* Caso marca personal: perfil digital y contactos */
+  .perfil-resumen{display:flex; align-items:baseline; gap:8px; margin:14px 0 18px;}
+  .perfil-cifra{font-size:26px; font-weight:800; color:var(--blanco);}
+  .perfil-etiqueta-cifra{font-size:11.5px; color:#767E96;}
+  .enlace-item{
+    display:flex; align-items:center; gap:12px;
+    padding-top:14px; border-top:1px solid rgba(255,255,255,0.08);
+  }
+  .enlace-item + .enlace-item{margin-top:14px;}
+  .enlace-icono{
+    width:30px; height:30px; border-radius:8px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    background:#3A4058; font-size:13px;
+  }
+  .resena-panel.despues .enlace-icono{background:rgba(255,212,0,0.18);}
+  .enlace-cuerpo{flex:1;}
+  .enlace-nombre{font-size:12.5px; font-weight:700; color:var(--blanco);}
+  .enlace-meta{font-size:11px; color:#767E96; margin-top:2px;}
+  .resena-panel.despues .enlace-meta{color:var(--verde); font-weight:600;}
+  .enlace-vacio{font-size:12px; color:#767E96; font-weight:400; line-height:1.5; padding-top:14px; border-top:1px solid rgba(255,255,255,0.08);}
+
   .resenas-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:32px;}
   .resena-panel{
     background:#1D2130; border-radius:16px; padding:24px;
@@ -380,7 +509,10 @@
   footer p{font-size:13px; color:var(--gris-texto);}
 
   @media (max-width:860px){
-    .hero .wrap, .problema-grid, .resenas-grid{grid-template-columns:1fr;}
+    .hero .wrap, .problema-grid, .resenas-grid, .selector-grid, .catalogo-grid, .kit-grid{grid-template-columns:1fr;}
+    .kit-grid{gap:32px;}
+    .kit-info p, .kit-info li{max-width:none;}
+    .form-kit{padding:26px 22px;}
     .hero h1{font-size:38px;}
     .ilustracion{height:340px; margin-top:20px;}
     .pasos, .beneficios-grid{grid-template-columns:1fr;}
@@ -388,6 +520,9 @@
     .paso-conector{display:none;}
     section{padding:64px 0;}
     .wrap{padding:0 22px;}
+    .resenas-mock{padding:26px 22px;}
+    .selector-card, .catalogo-card{padding:26px 22px;}
+    .titulo-seccion{font-size:26px;}
   }
 </style>
 </head>
@@ -395,17 +530,17 @@
 
 <header>
   <div class="wrap">
-    <div class="marca"><span class="punto"></span>TOCA Y SUBE</div>
+    <div class="marca"><span class="punto"></span>TOCA</div>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
     <div>
-      <h1>Haz que tu negocio sea el <span>número 1</span> en Google Maps.</h1>
-      <p class="sub">Convierte a tus clientes felices en reseñas de 5 estrellas en 3 segundos, con un toque de celular. Sin apps, sin enredos.</p>
+      <h1>Tu identidad digital y <span>reputación</span>, a 1 solo toque.</h1>
+      <p class="sub">Tarjetas inteligentes NFC para negocios que quieren dominar Google Maps y profesionales que buscan potenciar su marca personal y redes sociales al instante.</p>
       <div class="acciones">
-        <button type="button" class="cta-principal" data-scroll="pide-kit">Pide tu kit para tu negocio</button>
+        <button type="button" class="cta-principal" data-scroll="pide-kit">Pide tu tarjeta inteligente</button>
         <button type="button" class="cta-secundaria" data-scroll="como-funciona">Ver cómo funciona</button>
       </div>
     </div>
@@ -413,7 +548,7 @@
       <div class="flecha-conexion"></div>
       <div class="tarjeta-nfc">
         <div class="interior">
-          <div class="marca-tarjeta"><span class="punto"></span>TOCA Y SUBE</div>
+          <div class="marca-tarjeta"><span class="punto"></span>TOCA</div>
           <div class="gracias">¡Gracias por tu visita!</div>
           <div class="pill">Reseñanos en</div>
           <div class="google-word"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
@@ -440,6 +575,46 @@
   </div>
 </section>
 
+<section id="selector">
+  <div class="wrap">
+    <div class="selector-grid">
+
+      <div class="selector-card negocios">
+        <div class="selector-visual visual-negocios">
+          <div class="mostrador"></div>
+          <div class="mini-card-google">
+            <div class="estrellas-mini">★★★★★</div>
+            <div class="google-mini"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
+            <div class="reseñas-mini">Reseñas</div>
+          </div>
+        </div>
+        <div class="kicker">Para negocios y locales físicos</div>
+        <h3>Reputación &amp; Google</h3>
+        <p>Consigue más reseñas de 5 estrellas en automático. Convierte a cada cliente en tu mejor recomendación en Google Maps.</p>
+        <button type="button" class="cta-selector" data-scroll="linea-google">Ver tarjetas para Negocios →</button>
+      </div>
+
+      <div class="selector-card personal">
+        <div class="selector-visual visual-personal">
+          <div class="mini-card-exec">
+            <div class="qr-exec"></div>
+            <div>
+              <div class="nombre-exec">Laura Gómez</div>
+              <div class="rol-exec">Abogada · Consultora</div>
+            </div>
+            <div class="socials-exec"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="kicker">Para profesionales y marca personal</div>
+        <h3>Networking &amp; Estilo Beacons</h3>
+        <p>Tu tarjeta de presentación digital omnicanal. Comparte tus redes, WhatsApp, web y portafolio al instante, sin aplicaciones.</p>
+        <button type="button" class="cta-selector" data-scroll="linea-personal">Ver tarjetas para Marca Personal →</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="problema">
   <div class="wrap">
     <div class="kicker">El problema</div>
@@ -453,7 +628,7 @@
       <div class="mapas-comparacion">
 
         <div class="mapa-mock mal">
-          <div class="mapa-etiqueta"><span class="punto"></span>Sin Toca y Sube</div>
+          <div class="mapa-etiqueta"><span class="punto"></span>Sin Toca</div>
           <div class="mapa-buscador">🔍 panadería cerca de mí</div>
           <div class="mapa-lista">
             <div class="mapa-fila">
@@ -477,7 +652,7 @@
         </div>
 
         <div class="mapa-mock bien">
-          <div class="mapa-etiqueta"><span class="punto"></span>Con Toca y Sube</div>
+          <div class="mapa-etiqueta"><span class="punto"></span>Con Toca</div>
           <div class="mapa-buscador">🔍 panadería cerca de mí</div>
           <div class="mapa-lista">
             <div class="mapa-fila destacada">
@@ -553,12 +728,67 @@
   </div>
 </section>
 
+<section id="catalogo">
+  <div class="wrap">
+    <div class="kicker">Catálogo</div>
+    <h2 class="titulo-seccion">Dos líneas, un mismo toque.</h2>
+    <p class="intro-seccion">Elige el diseño que mejor represente lo que quieres impulsar: tu negocio o tu nombre.</p>
+
+    <div class="catalogo-grid">
+
+      <div class="catalogo-card clara" id="linea-google">
+        <div class="catalogo-visual">
+          <div class="mostrador"></div>
+          <div class="mini-card-google">
+            <div class="estrellas-mini">★★★★★</div>
+            <div class="google-mini"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></div>
+            <div class="reseñas-mini">Reseñas</div>
+          </div>
+        </div>
+        <div class="kicker">Línea Google / Business</div>
+        <h3>Enfocada en tu reputación local</h3>
+        <p>Diseño con los colores de Google, pensado para convertir cada visita en una reseña de 5 estrellas.</p>
+        <ul>
+          <li><span class="num-emoji">1️⃣</span>Redirección directa a tu perfil de Google</li>
+          <li><span class="num-emoji">2️⃣</span>Diseño con estrellas y llamada a la acción clara</li>
+          <li><span class="num-emoji">3️⃣</span>Ideal para mostrador, caja o mesa</li>
+        </ul>
+        <button type="button" class="cta-principal" data-scroll="pide-kit">Pide tu tarjeta inteligente</button>
+      </div>
+
+      <div class="catalogo-card oscura" id="linea-personal">
+        <div class="catalogo-visual oscuro-visual">
+          <div class="mini-card-exec">
+            <div class="qr-exec"></div>
+            <div>
+              <div class="nombre-exec">Laura Gómez</div>
+              <div class="rol-exec">Abogada · Consultora</div>
+            </div>
+            <div class="socials-exec"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="kicker">Línea Executive / Personal</div>
+        <h3>Sobria, con tu nombre y tu huella digital</h3>
+        <p>Diseño limpio en negro mate, blanco o morado, con código QR estético y chip NFC integrado.</p>
+        <ul>
+          <li><span class="num-emoji">1️⃣</span>Tu nombre impreso en la tarjeta</li>
+          <li><span class="num-emoji">2️⃣</span>Un solo enlace a redes, WhatsApp, web y portafolio</li>
+          <li><span class="num-emoji">3️⃣</span>Ideal para networking, eventos y reuniones</li>
+        </ul>
+        <button type="button" class="cta-principal" data-scroll="pide-kit">Pide tu tarjeta inteligente</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="nichos">
   <div class="wrap">
     <div class="kicker">Para quién es</div>
-    <h2 class="titulo-seccion">Si atiendes público a diario, esto es para ti.</h2>
-    <p class="intro-seccion">No importa el sector: si tus clientes salen contentos de tu local, les falta ese empujón de cinco segundos para dejarlo por escrito.</p>
+    <h2 class="titulo-seccion">No importa si buscas reseñas o contactos, hay una TOCA para ti.</h2>
+    <p class="intro-seccion">Negocios que atienden público a diario, o profesionales que viven del networking: ambos necesitan ese mismo empujón de cinco segundos.</p>
 
+    <p class="subtitulo-nichos">Negocios locales</p>
     <div class="nichos-grid">
       <div class="nicho-box">
         <div class="icono-circulo">
@@ -597,21 +827,61 @@
         <p>Y más</p>
       </div>
     </div>
+
+    <p class="subtitulo-nichos">Profesionales y marca personal</p>
+    <div class="nichos-grid">
+      <div class="nicho-box">
+        <div class="icono-circulo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C2AE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 7 2 13a3 3 0 0 0 6 0L5 7z"/><path d="M19 7l-3 6a3 3 0 0 0 6 0l-3-6z"/></svg>
+        </div>
+        <p>Abogados y Consultores</p>
+      </div>
+      <div class="nicho-box">
+        <div class="icono-circulo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C2AE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1"/></svg>
+        </div>
+        <p>Agentes Inmobiliarios</p>
+      </div>
+      <div class="nicho-box">
+        <div class="icono-circulo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C2AE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="10" r="1.6"/></svg>
+        </div>
+        <p>Médicos y Especialistas</p>
+      </div>
+      <div class="nicho-box">
+        <div class="icono-circulo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C2AE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="15" height="12" rx="2"/><path d="M17 10l5-3v10l-5-3"/></svg>
+        </div>
+        <p>Freelancers y Creadores de Contenido</p>
+      </div>
+      <div class="nicho-box">
+        <div class="icono-circulo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#7C2AE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v4"/><path d="M8 22h8"/></svg>
+        </div>
+        <p>Coaches y Conferencistas</p>
+      </div>
+      <div class="nicho-box">
+        <div class="icono-circulo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FFD400" stroke-width="2" stroke-linecap="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </div>
+        <p>Y más</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <div class="kicker">Resultado real</div>
-    <h2 class="titulo-seccion">Así se ve el cambio en el perfil de Google.</h2>
-    <p class="intro-seccion">Mismo negocio, mismo perfil de Google. Así lo ve un cliente nuevo cuando busca antes y después de la tarjeta.</p>
+    <h2 class="titulo-seccion">Dos casos, el mismo toque.</h2>
+    <p class="intro-seccion">Un negocio que quería reseñas y una profesional que quería contactos. Así se ve el antes y el después de cada uno.</p>
 
     <div class="resenas-mock">
       <p class="intro-mock">Panadería La Espiga, en Google Maps.</p>
 
       <div class="resenas-grid">
         <div class="resena-panel antes">
-          <div class="resena-etiqueta"><span class="punto"></span>Antes de Toca y Sube</div>
+          <div class="resena-etiqueta"><span class="punto"></span>Antes de Toca</div>
           <div class="resena-resumen">
             <span class="resena-prom">3.9</span>
             <span class="resena-estrellas-prom">★★★★☆</span>
@@ -638,7 +908,7 @@
         </div>
 
         <div class="resena-panel despues">
-          <div class="resena-etiqueta"><span class="punto"></span>Después de Toca y Sube</div>
+          <div class="resena-etiqueta"><span class="punto"></span>Después de Toca</div>
           <div class="resena-resumen">
             <span class="resena-prom">4.9</span>
             <span class="resena-estrellas-prom">★★★★★</span>
@@ -663,7 +933,73 @@
             </div>
           </div>
 
-          <div class="resena-badge">+37 reseñas nuevas con Toca y Sube</div>
+          <div class="resena-badge">+37 reseñas nuevas con Toca</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resenas-mock">
+      <p class="intro-mock">Laura Gómez, abogada — su perfil digital y sus contactos.</p>
+
+      <div class="resenas-grid">
+        <div class="resena-panel antes">
+          <div class="resena-etiqueta"><span class="punto"></span>Antes de Toca</div>
+          <div class="perfil-resumen">
+            <span class="perfil-cifra">4</span>
+            <span class="perfil-etiqueta-cifra">contactos nuevos al mes</span>
+          </div>
+
+          <div class="enlace-item">
+            <div class="enlace-icono">📇</div>
+            <div class="enlace-cuerpo">
+              <div class="enlace-nombre">Tarjetas de papel</div>
+              <div class="enlace-meta">La mayoría termina en un cajón</div>
+            </div>
+          </div>
+
+          <div class="enlace-item">
+            <div class="enlace-icono">✍️</div>
+            <div class="enlace-cuerpo">
+              <div class="enlace-nombre">Número dictado a mano</div>
+              <div class="enlace-meta">Se escribe mal o no se guarda</div>
+            </div>
+          </div>
+
+          <p class="enlace-vacio">Sus redes, su web y su portafolio quedaban fuera de la conversación.</p>
+        </div>
+
+        <div class="resena-panel despues">
+          <div class="resena-etiqueta"><span class="punto"></span>Después de Toca</div>
+          <div class="perfil-resumen">
+            <span class="perfil-cifra">31</span>
+            <span class="perfil-etiqueta-cifra">contactos nuevos al mes</span>
+          </div>
+
+          <div class="enlace-item">
+            <div class="enlace-icono">💬</div>
+            <div class="enlace-cuerpo">
+              <div class="enlace-nombre">WhatsApp directo</div>
+              <div class="enlace-meta">68 clics este mes</div>
+            </div>
+          </div>
+
+          <div class="enlace-item">
+            <div class="enlace-icono">📸</div>
+            <div class="enlace-cuerpo">
+              <div class="enlace-nombre">Instagram profesional</div>
+              <div class="enlace-meta">+240 seguidores nuevos</div>
+            </div>
+          </div>
+
+          <div class="enlace-item">
+            <div class="enlace-icono">🌐</div>
+            <div class="enlace-cuerpo">
+              <div class="enlace-nombre">Web y portafolio</div>
+              <div class="enlace-meta">52 visitas desde la tarjeta</div>
+            </div>
+          </div>
+
+          <div class="resena-badge">Todo su perfil en un solo toque</div>
         </div>
       </div>
     </div>
@@ -673,7 +1009,7 @@
 <section class="pide-kit" id="pide-kit">
   <div class="wrap">
     <div class="kicker">Pide tu kit</div>
-    <h2 class="titulo-seccion">Cuéntanos de tu negocio y te escribimos por WhatsApp.</h2>
+    <h2 class="titulo-seccion">Cuéntanos qué quieres impulsar y te escribimos por WhatsApp.</h2>
     <p class="intro-seccion">Llena estos datos y te enviamos directo al chat con el mensaje ya armado, listo para coordinar tu tarjeta.</p>
 
     <div class="kit-grid">
@@ -694,9 +1030,9 @@
         </div>
 
         <div class="campo" id="campoNegocio">
-          <label for="negocio">Nombre del negocio</label>
-          <input type="text" id="negocio" name="negocio" placeholder="Ej: Panadería La Espiga" autocomplete="organization">
-          <span class="campo-error">Escribe el nombre de tu negocio.</span>
+          <label for="negocio">Negocio o marca personal</label>
+          <input type="text" id="negocio" name="negocio" placeholder="Ej: Panadería La Espiga o Laura Gómez" autocomplete="organization">
+          <span class="campo-error">Escribe el nombre de tu negocio o marca.</span>
         </div>
 
         <div class="campo" id="campoCelular">
@@ -752,19 +1088,19 @@
 
     <div class="faq-cierre">
       <p>¿Tienes otra duda?</p>
-      <button type="button" class="cta-principal" data-scroll="pide-kit">Escríbenos por WhatsApp</button>
+      <button type="button" class="cta-principal" data-scroll="pide-kit">Pide tu tarjeta inteligente</button>
     </div>
   </div>
 </section>
 
-<button type="button" class="whatsapp-flotante" data-scroll="pide-kit" aria-label="Escribir por WhatsApp">
+<button type="button" class="whatsapp-flotante" id="waFlotante" aria-label="Escribir por WhatsApp">
   <svg viewBox="0 0 24 24" fill="#3E0E93"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.8c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.3c1.5.8 3.3 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.1c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.2.9.9-3.1-.2-.3c-.9-1.5-1.4-3.1-1.4-4.9 0-4.6 3.7-8.3 8.3-8.3s8.3 3.7 8.3 8.3-3.7 8.3-8.3 8.3z"/></svg>
 </button>
 
 <footer>
   <div class="wrap">
-    <div class="marca"><span class="punto"></span>TOCA Y SUBE</div>
-    <p>Tarjetas NFC de reseñas para negocios locales.</p>
+    <div class="marca"><span class="punto"></span>TOCA</div>
+    <p>Tarjetas NFC de identidad digital para negocios y profesionales.</p>
   </div>
 </footer>
 
@@ -780,7 +1116,15 @@
 
   // Reemplaza este número por el número real de WhatsApp del negocio,
   // en formato internacional sin signos ni espacios. Ej: "573001234567"
-  const WHATSAPP_NUMBER = "";
+  const WHATSAPP_NUMBER = "573332892087";
+
+  const numero = WHATSAPP_NUMBER.trim();
+
+  // Botón flotante: abre WhatsApp directamente con un mensaje genérico.
+  document.getElementById('waFlotante').addEventListener('click', function () {
+    const texto = 'Hola, quiero información sobre las tarjetas inteligentes Toca.';
+    window.open('https://wa.me/' + numero + '?text=' + encodeURIComponent(texto), '_blank');
+  });
 
   const form = document.getElementById('formKit');
 
@@ -808,9 +1152,8 @@
 
     const mensaje =
       'Hola, soy ' + nombre + ' de ' + negocio +
-      '. Quiero pedir mi kit de tarjetas Toca y Sube. Mi celular es ' + celular + '.';
+      '. Quiero pedir mi tarjeta inteligente Toca. Mi celular es ' + celular + '.';
 
-    const numero = WHATSAPP_NUMBER.trim();
     const base = numero ? 'https://wa.me/' + numero : 'https://wa.me/';
     const url = base + '?text=' + encodeURIComponent(mensaje);
 
